@@ -1,6 +1,6 @@
-require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
-require'lspconfig'.texlab.setup{on_attach=require'completion'.on_attach}
-require'lspconfig'.jsonls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.tsserver.setup{}
+-- require'lspconfig'.texlab.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.jsonls.setup{}
 
 local system_name
 if vim.fn.has('mac') == 1 then
@@ -17,7 +17,6 @@ local sumneko_root_path = vim.fn.stdpath('cache') .. '/lspconfig/sumneko_lua/lua
 local sumneko_binary = sumneko_root_path .. '/bin/' .. system_name .. '/lua-language-server'
 
 require'lspconfig'.sumneko_lua.setup {
-  on_attach = require'completion'.on_attach,
   cmd = {sumneko_binary, '-E', sumneko_root_path .. '/main.lua'},
   settings = {
     Lua = {

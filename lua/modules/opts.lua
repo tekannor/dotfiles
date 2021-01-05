@@ -9,7 +9,8 @@ vim.o.termguicolors = true
 vim.bo.expandtab = true
 vim.bo.undofile = true
 vim.bo.textwidth = 120
-vim.bo.shiftwidth = 2 
+vim.bo.shiftwidth = 2
+vim.bo.cindent = true
 
 vim.wo.cursorline = true
 vim.wo.number = true

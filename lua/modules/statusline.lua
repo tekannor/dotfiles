@@ -25,7 +25,6 @@ function! Status()
   endif
 endfunction
 
-highlight StatusLine guibg=#282828 guifg=#dddddd
 highlight Warning guifg=#f8981c guibg=#282828
 highlight Error guifg=#c41111 guibg=#282828
 

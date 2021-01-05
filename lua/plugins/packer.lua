@@ -17,6 +17,7 @@ return require('packer').startup(function()
   use 'justinmk/vim-dirvish'
   use 'neovim/nvim-lspconfig'
   use 'romainl/vim-qf'
+  use 'nvim-treesitter/nvim-treesitter'
   use {'nvim-lua/completion-nvim', requires = {'SirVer/ultisnips', 'vim-snippets'}}
   use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim'}}
 
