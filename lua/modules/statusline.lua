@@ -1,8 +1,8 @@
-vim.cmd [[
-set noshowmode
-set laststatus=2
-set noruler
+vim.o.showmode = false
+vim.o.laststatus = 2
+vim.o.ruler = false
 
+vim.cmd [[
 function! Status()
   if mode() == 'n'
     return " NORMAL "
@@ -37,11 +37,9 @@ set statusline+=%{FugitiveHead()!=''?'\ ':''}
 set statusline+=%{FugitiveHead()!=''?FugitiveHead():''}
 
 set statusline+=%=
-
 function! Diagnostics() abort
-  let info = get(b:, 'coc_diagnostic_info', {})
-  let errors = get(info, 'error', 0)
-  let warnings = get(info, 'warning', 0)
+  let errors = luaeval("vim.lsp.diagnostic.get_count(0, 'Error')")
+  let warnings = luaeval("vim.lsp.diagnostic.get_count(0, 'Warning')")
   return {'errors': errors, 'warnings': warnings}
 endfunction
 
@@ -50,9 +48,7 @@ set statusline+=%{Diagnostics().errors?'\ ●\ ':''}%*
 set statusline+=%#Warning#%{Diagnostics().warnings?Diagnostics().warnings:''}
 set statusline+=%{Diagnostics().warnings?'\ ●\ ':''}%*
 
-set statusline+=%{tolower(&filetype)}
+set statusline+=%f
 set statusline+=\ %l:%c\ 
-
-set statusline+=%{getcwd()}
 
 ]]

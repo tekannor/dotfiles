@@ -1,4 +1,4 @@
-vim.cmd 'filetype plugin on'
+vim.cmd 'filetype plugin indent on'
 
 vimp.tnoremap({'silent'}, '<Esc>', '<C-\\><C-n>')
 vimp.nnoremap({'silent'}, 'gB', ':bnext<CR>')

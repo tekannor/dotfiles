@@ -1,3 +1,5 @@
+vim.o.fillchars = 'eob: '
+
 vim.cmd 'colorscheme spaceduck'
 
 vim.cmd 'autocmd ColorScheme * hi Normal guibg=none'

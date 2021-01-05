@@ -10,7 +10,7 @@ vim.bo.expandtab = true
 vim.bo.undofile = true
 vim.bo.textwidth = 120
 vim.bo.shiftwidth = 2
-vim.bo.cindent = true
+vim.bo.tabstop = 2
 
 vim.wo.cursorline = true
 vim.wo.number = true
