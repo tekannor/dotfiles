@@ -1,10 +1,10 @@
-require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
-require'lspconfig'.texlab.setup{on_attach=require'completion'.on_attach}
-require'lspconfig'.jsonls.setup{on_attach=require'completion'.on_attach}
-require'lspconfig'.cssls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.texlab.setup{}
+require'lspconfig'.jsonls.setup{}
+require'lspconfig'.cssls.setup{}
+require'lspconfig'.svelte.setup{}
 
 require'lspconfig'.diagnosticls.setup({
-  on_attach=require'completion'.on_attach,
   filetypes={
     'markdown',
     'javascript',
@@ -42,6 +42,9 @@ require'lspconfig'.diagnosticls.setup({
           [2] = 'error',
           [1] = 'warning',
         },
+        requiredFiles = {
+          '.eslintrc.json',
+        },
       },
       stylelint = {
         command = './node_modules/.bin/stylelint',
@@ -64,6 +67,9 @@ require'lspconfig'.diagnosticls.setup({
         securities = {
           error = 'error',
           warning = 'warning'
+        },
+        requiredFiles = {
+          '.stylelintrc.json',
         }
       },
       markdownlint = {
@@ -101,17 +107,30 @@ require'lspconfig'.diagnosticls.setup({
         args = {
           '--write',
           '%filepath',
+        },
+        requiredFiles = {
+          '.prettierrc.json',
+        }
+      },
+      stylelint = {
+        command = './node_modules/.bin/stylelint',
+        args = {
+          '--fix',
+          '%filepath',
+        },
+        requiredFiles = {
+          '.stylelintrc.json',
         }
       }
     },
     formatFiletypes = {
-      javascript = 'prettier',
-      typescript = 'prettier',
-      javascriptreact = 'prettier',
-      typescriptreact = 'prettier',
-      html = 'prettier',
-      css = 'prettier',
-      scss = 'prettier',
+      javascript = {'prettier', 'stylelint'},
+      typescript = {'prettier', 'stylelint'},
+      javascriptreact = {'prettier', 'stylelint'},
+      typescriptreact = {'prettier', 'stylelint'},
+      html = {'prettier', 'stylelint'},
+      css = {'prettier', 'stylelint'},
+      scss = {'prettier', 'stylelint'},
     },
   }
 })

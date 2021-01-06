@@ -7,11 +7,11 @@ vim.o.splitright = true
 vim.o.termguicolors = true
 vim.o.shiftround = true
 
-vim.bo.expandtab = true
 vim.bo.undofile = true
 vim.bo.textwidth = 120
+vim.bo.expandtab = true
 vim.bo.shiftwidth = 2
-vim.bo.softtabstop = 2
+vim.bo.tabstop = 2
 
 vim.wo.cursorline = true
 vim.wo.number = true

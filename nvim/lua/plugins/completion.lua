@@ -1,5 +1,3 @@
--- vimp.inoremap({'expr'}, '<Tab>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]])
--- vimp.inoremap({'expr'}, '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
 vim.g.completion_confirm_key = '<Tab>'
 vimp.imap({'silent'}, '<C-Space>', '<Plug>(completion_trigger)')
 

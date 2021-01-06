@@ -1,0 +1,6 @@
+vimp.nnoremap('<Leader>ff', ':Files<CR>')
+vimp.nnoremap('<Leader>fp', ':GitFiles<CR>')
+vimp.nnoremap('<Leader>fb', ':Buffers<CR>')
+vimp.nnoremap('<Leader>fg', ':Rg<CR>')
+vimp.nnoremap('<Leader>fm', ':History<CR>')
+vimp.nnoremap('<Leader>fc', ':History:<CR>')
