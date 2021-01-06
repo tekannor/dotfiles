@@ -7,11 +7,3 @@ vim.lsp.handlers['textDocument/typeDefinition'] = require'lsputil.locations'.typ
 vim.lsp.handlers['textDocument/implementation'] = require'lsputil.locations'.implementation_handler
 vim.lsp.handlers['textDocument/documentSymbol'] = require'lsputil.symbols'.document_handler
 vim.lsp.handlers['workspace/symbol'] = require'lsputil.symbols'.workspace_handler
-
-vimp.nnoremap('<Space>ca', vim.lsp.buf.code_action)
-vimp.nnoremap('<Space>cn', vim.lsp.buf.rename)
-vimp.nnoremap('<Space>cr', vim.lsp.buf.references)
-vimp.nnoremap('<Space>cd', vim.lsp.buf.definition)
-vimp.nnoremap('<Space>ci', vim.lsp.buf.implementation)
-
-vimp.bind('nix', '<C-k>', vim.lsp.buf.hover)

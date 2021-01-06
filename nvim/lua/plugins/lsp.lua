@@ -98,19 +98,20 @@ require'lspconfig'.diagnosticls.setup({
     formatters = {
       prettier = {
         command = './node_modules/.bin/prettier',
-        -- args = {
-        --   '--stdin-filepath',
-        --   '%filepath',
-        --   '--single-quote',
-        --   '--print-width 120'
-        -- }
+        args = {
+          '--write',
+          '%filepath',
+        }
       }
     },
     formatFiletypes = {
       javascript = 'prettier',
       typescript = 'prettier',
       javascriptreact = 'prettier',
-      typescriptreact = 'prettier'
+      typescriptreact = 'prettier',
+      html = 'prettier',
+      css = 'prettier',
+      scss = 'prettier',
     },
   }
 })
@@ -149,18 +150,3 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
-
-local default_handler = vim.lsp.handlers["textDocument/publishDiagnostics"]
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = function(err, method, result, client_id)
-  default_handler(err, method, result, client_id)
-  if result and result.diagnostics then
-    for _, v in ipairs(result.diagnostics) do
-      v.bufnr = vim.uri_to_bufnr(result.uri)
-      v.lnum = v.range.start.line + 1
-      v.col = v.range.start.character + 1
-      v.text = v.message
-    end
-  vim.lsp.util.set_qflist(result.diagnostics, 'a')
-  end
-end

@@ -13,6 +13,7 @@ return require('packer').startup(function()
   use 'romainl/vim-cool'
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
+  use 'aymericbeaumet/vim-symlink'
 
   use 'justinmk/vim-dirvish'
   use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim'}}

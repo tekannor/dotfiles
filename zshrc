@@ -7,3 +7,10 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 alias rm='echo "This is not the command you are looking for."; false'
+
+dots=$HOME/Projects/dotfiles
+
+pgrep fswatch &> /dev/null
+if [ $? -eq 1 ]; then
+fswatch $HOME/Projects/dotfiles/nvim | xargs -n1 -I{} $HOME/Projects/dotfiles/onupdate.sh &!
+fi

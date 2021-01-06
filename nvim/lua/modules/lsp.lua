@@ -1,0 +1,8 @@
+vimp.nnoremap('<Space>ca', vim.lsp.buf.code_action)
+vimp.nnoremap('<Space>cn', vim.lsp.buf.rename)
+vimp.nnoremap('<Space>cr', vim.lsp.buf.references)
+vimp.nnoremap('<Space>cd', vim.lsp.buf.definition)
+vimp.nnoremap('<Space>ci', vim.lsp.buf.implementation)
+vimp.nnoremap('<Space>n', vim.lsp.diagnostic.goto_next)
+vimp.nnoremap('<Space>p', vim.lsp.diagnostic.goto_prev)
+vimp.bind('nix', '<C-k>', vim.lsp.buf.hover)
