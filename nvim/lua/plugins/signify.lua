@@ -7,8 +7,9 @@ vim.g.signify_sign_change = '▌'
 
 vim.g.signify_sign_show_count = false
 
+
 vim.cmd 'autocmd ColorScheme * hi SignColumn guibg=none'
-vim.cmd 'autocmd ColorScheme * hi DiffAdd guibg=none'
-vim.cmd 'autocmd ColorScheme * hi DiffChange guibg=none'
-vim.cmd 'autocmd ColorScheme * hi DiffRemove guibg=none'
-vim.cmd 'autocmd ColorScheme * hi SignifySignDelete guibg=none'
+vim.cmd 'autocmd ColorScheme * hi DiffAdd guibg=none gui=none'
+vim.cmd 'autocmd ColorScheme * hi DiffChange guibg=none gui=none'
+vim.cmd 'autocmd ColorScheme * hi DiffRemove guibg=none gui=none'
+vim.cmd 'autocmd ColorScheme * hi SignifySignDelete guibg=none gui=none'

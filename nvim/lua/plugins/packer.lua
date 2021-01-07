@@ -10,8 +10,9 @@ return require'packer'.startup(function()
   use 'tpope/vim-abolish'
   use 'tpope/vim-commentary'
   use 'tpope/vim-fugitive'
+  use 'tpope/vim-eunuch'
   use 'mhinz/vim-signify'
-  use 'justinmk/vim-sneak'
+  use 'unblevable/quick-scope'
   use 'romainl/vim-cool'
 
   -- buffer management
@@ -21,13 +22,16 @@ return require'packer'.startup(function()
   use {'junegunn/fzf', requires = {'junegunn/fzf.vim'}, run = 'fzf#install'}
 
   -- language support
+  use 'sheerun/vim-polyglot'
+  use 'evanleck/vim-svelte'
   use 'lervag/vimtex'
-  use 'nvim-treesitter/nvim-treesitter'
   use {'neoclide/coc.nvim', branch = 'release'}
+  -- use 'nvim-treesitter/nvim-treesitter'
   -- use 'neovim/nvim-lspconfig'
   -- use {'nvim-lua/completion-nvim', requires = {'SirVer/ultisnips', 'honza/vim-snippets'}}
   -- use {'RishabhRD/nvim-lsputils', requires = {'RishabhRD/popfix'}}
 
   -- eyecandy
   use 'pineapplegiant/spaceduck'
+  use 'jsit/toast.vim/'
 end)

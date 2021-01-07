@@ -25,11 +25,6 @@ augroup Coc
 augroup end
 ]]
 
-vim.cmd [[
-command! -nargs=0 Format :call CocAction('format')
-command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
-]]
-
 local function check_back_space()
   local col = vim.fn.col('.') - 1
   return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s')
@@ -59,6 +54,7 @@ vimp.nmap({'silent'}, '<Space>rn', '<Plug>(coc-rename)')
 vimp.nmap({'silent'}, '<Space>fa', ':CocAction<CR>')
 
 vimp.nnoremap({'silent'}, 'K', show_docs)
+vimp.nmap({'silent'}, '<Esc>', ':call coc#float#close_all()<CR>')
 vimp.nnoremap({'silent'}, '<Space>a', ':<C-u>CocList diagnostics<CR>')
-vimp.nnoremap({'silent'}, '<Space>fm', ':Format<CR>')
-vimp.nnoremap({'silent'}, '<Space>fo', ':OR<CR>')
+vimp.nnoremap({'silent'}, '<Space>fm', [[:call CocAction('format')<CR>]])
+vimp.nnoremap({'silent'}, '<Space>fo', [[:call CocAction('runCommand', 'editor.action.organizeImport')<CR>]])
