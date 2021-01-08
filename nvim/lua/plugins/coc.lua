@@ -60,7 +60,6 @@ vimp.nnoremap('K', function()
 end)
 
 vimp.inoremap({'expr'}, '<CR>', function()
-  print (fn.complete_info()['selected'])
   if tonumber(fn.complete_info()['selected']) >= 0  then
     return '<C-y>'
   end 

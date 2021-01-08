@@ -1,6 +1,13 @@
 require 'plugins.packer'
 require 'vimp'
 
+
+require 'modules.opts'
+require 'modules.setup'
+require 'modules.eyecandy'
+require 'modules.statusline'
+-- require 'modules.lsp'
+
 require 'plugins.rooter'
 require 'plugins.dirvish'
 require 'plugins.signify'
@@ -14,9 +21,3 @@ require 'plugins.fzf'
 -- require 'plugins.lspconfig'
 -- require 'plugins.lsputils'
 -- require 'plugins.completion'
-
-require 'modules.opts'
-require 'modules.setup'
-require 'modules.eyecandy'
-require 'modules.statusline'
--- require 'modules.lsp'
