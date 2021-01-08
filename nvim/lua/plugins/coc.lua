@@ -61,24 +61,24 @@ end)
 vimp.inoremap({'expr'}, '<CR>', function()
   if tonumber(fn.complete_info()['selected']) >= 0  then
     return '<C-y>'
-  end 
+  end
   return '<C-g>u<CR><c-r>=coc#on_enter()<CR>'
 end)
 
 vimp.inoremap({'expr'}, '<C-Space>', fn['coc#refresh'])
 
-vimp.nmap('[g', '<Plug>(coc-diagnostic-prev)')
-vimp.nmap(']g', '<Plug>(coc-diagnostic-next)')
-vimp.nmap('gd', '<Plug>(coc-definition)')
-vimp.nmap('gD', '<Plug>(coc-declaration)')
-vimp.nmap('gy', '<Plug>(coc-type-definition)')
-vimp.nmap('gI', '<Plug>(coc-implementation)')
-vimp.nmap('gr', '<Plug>(coc-references)')
-vimp.nmap('<Space>rn', '<Plug>(coc-rename)')
+vimp.nmap('<Space>p', '<Plug>(coc-diagnostic-prev)')
+vimp.nmap('<Space>n', '<Plug>(coc-diagnostic-next)')
+vimp.nmap('<Space>d', '<Plug>(coc-definition)')
+vimp.nmap('<Space>D', '<Plug>(coc-declaration)')
+vimp.nmap('<Space>t', '<Plug>(coc-type-definition)')
+vimp.nmap('<Space>i', '<Plug>(coc-implementation)')
+vimp.nmap('<Space>r', '<Plug>(coc-references)')
+vimp.nmap('<Space>2', '<Plug>(coc-rename)')
 
 vimp.nnoremap('<Esc>', fn['coc#float#close_all'])
-vimp.nnoremap('<Space>d', ':<C-u>CocList diagnostics<CR>')
-vimp.nnoremap('<Space>fa', function() vim.cmd 'CocAction' end)
-vimp.nnoremap('<Space>fm', function() fn.CocActionAsync('format') end)
-vimp.nnoremap('<Space>fo', function() fn.CocActionAsync('runCommand', 'editor.action.organizeImport') end)
+vimp.nnoremap('<Space>e', ':<C-u>CocList diagnostics<CR>')
+vimp.nnoremap('<Space>a', function() vim.cmd 'CocAction' end)
+vimp.nnoremap('<Space>f', function() fn.CocActionAsync('format') end)
+vimp.nnoremap('<Space>o', function() fn.CocActionAsync('runCommand', 'editor.action.organizeImport') end)
 
