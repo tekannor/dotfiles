@@ -1,8 +1,9 @@
 vim.cmd 'filetype plugin indent on'
 
-vimp.tnoremap({'silent'}, '<Esc>', '<C-\\><C-n>')
-vimp.nnoremap({'silent'}, 'gB', ':bnext<CR>')
-vimp.nnoremap({'silent'}, 'gb', ':bprev<CR>')
+vimp.tnoremap('<Esc>', '<C-\\><C-n>')
+vimp.nnoremap('gB', ':bnext<CR>')
+vimp.nnoremap('gb', ':bprev<CR>')
+vimp.nnoremap('<M-q>', 'gwap')
 
 vim.cmd [[au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]]
 vim.cmd [[au CmdlineLeave : echo '']]
@@ -13,3 +14,4 @@ vim.cmd [[
   cnoreabbrev <expr> WQ ((getcmdtype() is# ':' && getcmdline() is# 'WQ')?('wq'):('WQ'))
   cnoreabbrev <expr> Wq ((getcmdtype() is# ':' && getcmdline() is# 'Wq')?('wq'):('Wq'))
 ]]
+

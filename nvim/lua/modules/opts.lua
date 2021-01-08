@@ -6,7 +6,7 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.termguicolors = true
 vim.o.shiftround = true
-
+vim.o.inccommand = 'nosplit'
 vim.bo.undofile = true
 vim.bo.textwidth = 120
 

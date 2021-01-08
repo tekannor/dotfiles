@@ -17,21 +17,22 @@ return require'packer'.startup(function()
 
   -- buffer management
   use 'justinmk/vim-dirvish'
-  use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim'}}
   use 'airblade/vim-rooter'
   use {'junegunn/fzf', requires = {'junegunn/fzf.vim'}, run = 'fzf#install'}
+  -- use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim'}}
 
   -- language support
   use 'sheerun/vim-polyglot'
   use 'evanleck/vim-svelte'
   use 'lervag/vimtex'
+  use {'SirVer/ultisnips', requires = 'honza/vim-snippets'}
   use {'neoclide/coc.nvim', branch = 'release'}
-  -- use 'nvim-treesitter/nvim-treesitter'
+  use {'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'}
   -- use 'neovim/nvim-lspconfig'
   -- use {'nvim-lua/completion-nvim', requires = {'SirVer/ultisnips', 'honza/vim-snippets'}}
   -- use {'RishabhRD/nvim-lsputils', requires = {'RishabhRD/popfix'}}
 
   -- eyecandy
-  use 'pineapplegiant/spaceduck'
-  use 'jsit/toast.vim/'
+  use 'Yggdroot/indentLine'
+  use 'ayu-theme/ayu-vim'
 end)
