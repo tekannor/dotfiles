@@ -35,11 +35,10 @@ end
 vimp.inoremap({'expr'}, '<Tab>', function()
   if fn.pumvisible() ~= 0 then
     return '<C-n>'
-  end
-  if check_back_space() then
+  elseif check_back_space() then
     return '<Tab>'
   end
-  return fn['coc#refresh']()
+  fn['coc#refresh']()
 end)
 
 vimp.inoremap({'expr'}, '<S-Tab>', function()

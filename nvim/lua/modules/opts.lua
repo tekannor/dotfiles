@@ -22,3 +22,6 @@ vim.wo.relativenumber = true
 vim.wo.signcolumn = 'yes'
 
 vim.g.mapleader = ','
+
+-- mouse for resizing panes is just too tempting
+vim.o.mouse = 'a'

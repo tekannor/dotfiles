@@ -1,7 +1,6 @@
 require 'plugins.packer'
 require 'vimp'
 
-
 require 'modules.opts'
 require 'modules.setup'
 require 'modules.eyecandy'
