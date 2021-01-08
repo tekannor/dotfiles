@@ -29,7 +29,7 @@ syn keyword cssTagName abbr address area a b base
 syn keyword cssTagName bdo blockquote body br button
 syn keyword cssTagName caption cite code col colgroup dd del
 syn keyword cssTagName dfn div dl dt em fieldset form
-syn keyword cssTagName h1 h2 h3 h4 h5 h6 head hr html img i
+syn keyword cssTagName h1 h2 h3 h4 h5 h6head hr html img i
 syn keyword cssTagName iframe input ins isindex kbd label legend li
 syn keyword cssTagName link map menu meta noscript ol optgroup
 syn keyword cssTagName option p param pre q s samp script small
@@ -638,8 +638,8 @@ hi def link cssUnicodeRange Constant
 hi def link cssClassName Function
 hi def link cssClassNameDot Function
 hi def link cssProp StorageClass
-hi def link cssAttr Constant
-hi def link cssUnitDecorators Number
+" hi def link cssAttr Constant
+" hi def link cssUnitDecorators Number
 hi def link cssNoise Noise
 
 let b:current_syntax = "css"

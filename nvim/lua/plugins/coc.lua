@@ -14,7 +14,6 @@ vim.g.coc_global_extensions = {
   'coc-vimtex',
 }
 
-
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.cmdheight = 2
@@ -61,7 +60,8 @@ vimp.nnoremap('K', function()
 end)
 
 vimp.inoremap({'expr'}, '<CR>', function()
-  if tonumber(fn.complete_info()['selected']) > 0  then
+  print (fn.complete_info()['selected'])
+  if tonumber(fn.complete_info()['selected']) >= 0  then
     return '<C-y>'
   end 
   return '<C-g>u<CR><c-r>=coc#on_enter()<CR>'

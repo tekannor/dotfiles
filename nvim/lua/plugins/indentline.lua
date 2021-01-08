@@ -1,1 +1,1 @@
-vim.g.indentLine_char_list = '|'
+vim.g.indentLine_char = '│'

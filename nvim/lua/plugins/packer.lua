@@ -27,12 +27,12 @@ return require'packer'.startup(function()
   use 'lervag/vimtex'
   use {'SirVer/ultisnips', requires = 'honza/vim-snippets'}
   use {'neoclide/coc.nvim', branch = 'release'}
-  use {'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'}
+  -- use {'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'}
   -- use 'neovim/nvim-lspconfig'
   -- use {'nvim-lua/completion-nvim', requires = {'SirVer/ultisnips', 'honza/vim-snippets'}}
   -- use {'RishabhRD/nvim-lsputils', requires = {'RishabhRD/popfix'}}
 
   -- eyecandy
   use 'Yggdroot/indentLine'
-  use 'ayu-theme/ayu-vim'
+  use 'tekannor/ayu-vim'
 end)
