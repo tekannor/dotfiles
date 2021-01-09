@@ -51,8 +51,4 @@ function _G.build_statusline()
   return table.concat(components, space)
 end
 
-vim.cmd [[
-augroup StatusLine
-  autocmd WinEnter,BufEnter * setlocal statusline=%!v:lua.build_statusline()
-augroup end
-]]
+vim.cmd 'set statusline=%!v:lua.build_statusline()'
