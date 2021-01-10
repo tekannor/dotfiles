@@ -6,7 +6,7 @@ local function mode()
   local modes = {
     i = 'INSERT',
     n = 'NORMAL',
-    r = "REPLACE",
+    R = "REPLACE",
     v = "VISUAL",
     V = "VISUAL",
     c = "COMMAND",
@@ -33,9 +33,9 @@ end
 
 function _G.build_statusline()
   local space = ' '
+  local big_space = '%='
   local filename = vim.fn.expand('%:t')
   local modified = vim.bo.modified and '+' or space
-  local big_space = '%='
   local filetype = vim.bo.filetype
   local filepath = vim.fn.expand('%f')
   local position = vim.fn.line('.') .. ':' .. vim.fn.col('.')

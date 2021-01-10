@@ -16,14 +16,14 @@ return require'packer'.startup(function()
   use 'romainl/vim-cool'
 
   -- buffer management
-  use 'justinmk/vim-dirvish'
   use 'airblade/vim-rooter'
   use {'junegunn/fzf', requires = {'junegunn/fzf.vim'}, run = 'fzf#install'}
+  use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
   -- use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim'}}
+  -- use 'justinmk/vim-dirvish'
 
   -- language support
   use 'sheerun/vim-polyglot'
-  use 'evanleck/vim-svelte'
   use 'lervag/vimtex'
   use {'SirVer/ultisnips', requires = 'honza/vim-snippets'}
   use {'neoclide/coc.nvim', branch = 'release'}
