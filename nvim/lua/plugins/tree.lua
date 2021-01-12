@@ -2,7 +2,7 @@ vim.g.nvim_tree_side = 'right'
 vim.g.nvim_tree_width = 40
 vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
 vim.g.nvim_tree_auto_open = 0
-vim.g.nvim_tree_auto_close = 0
+vim.g.nvim_tree_auto_close = 1
 vim.g.nvim_tree_quit_on_open = 0
 vim.g.nvim_tree_follow = 1
 vim.g.nvim_tree_indent_markers = 1
@@ -59,3 +59,5 @@ vim.g.nvim_tree_icons = {
 
 vimp.nnoremap('<C-t>', ':NvimTreeToggle<CR>')
 vimp.nnoremap('-', ':NvimTreeFindFile<CR>')
+
+vim.cmd 'highlight NvimTreeFolderName guibg=blue'

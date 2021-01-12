@@ -25,6 +25,7 @@ return require'packer'.startup(function()
   -- language support
   use 'sheerun/vim-polyglot'
   use 'lervag/vimtex'
+  use 'jonsmithers/vim-html-template-literals'
   use {'SirVer/ultisnips', requires = 'honza/vim-snippets'}
   use {'neoclide/coc.nvim', branch = 'release'}
   -- use {'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'}
